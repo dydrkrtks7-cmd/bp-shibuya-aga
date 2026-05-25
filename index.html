@@ -4,201 +4,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LLM비교 전문 포트폴리오 저널</title>
+  <title>글로벌 헤어 클리닉 & 모발 과학 아카이브</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #10b981;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
+      background-color: #050505;
+      color: #f3f3f3;
+      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+      line-height: 1.6;
+      padding: 32px;
     }
-    .container {
-      max-width: 900px;
+    .wrapper {
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 60px 0;
     }
     header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
+      margin-bottom: 60px;
     }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+    .brand {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
       text-decoration: none;
-      color: var(--text-color);
+      letter-spacing: -0.05em;
     }
-    nav { display: flex; gap: 20px; }
+    nav { display: flex; gap: 24px; }
     nav a {
-      color: var(--muted-color);
+      color: #999999;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
     }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
+    nav a:hover { color: #ff3b30; }
+    main { margin-bottom: 80px; }
+    .label {
       font-size: 0.75rem;
       font-family: monospace;
+      color: #ff3b30;
+      font-weight: bold;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(16, 185, 129, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
       margin-bottom: 24px;
     }
-    .posts-list {
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+    .content {
+      font-size: 1.15rem;
+      color: #dddddd;
+      font-weight: 400;
+      max-width: 780px;
+    }
+    .content p { margin-bottom: 24px; }
+    .juice-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: inset 0 -6px 0 #ff3b30;
+      transition: all 0.15s ease-in-out;
+    }
+    .juice-link:hover {
+      box-shadow: inset 0 -24px 0 #ff3b30;
+      color: #ffffff;
+    }
+    .archive-section {
+      margin-top: 80px;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-family: monospace;
+      color: #999999;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 32px;
+    }
+    .archive-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
+    .archive-card {
       text-decoration: none;
-      color: var(--text-color);
+      color: #ffffff;
+      display: block;
+      border: 1px solid #222222;
+      padding: 32px;
       transition: all 0.2s ease;
     }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
+    .archive-card:hover {
+      border-color: #ff3b30;
+      background-color: #0a0a0a;
     }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+    .archive-card h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
     }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
+    .archive-card p {
+      color: #999999;
+      font-size: 0.95rem;
     }
     footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
+      border-top: 1px solid #222222;
+      padding-top: 32px;
       display: flex;
       justify-content: space-between;
       font-size: 0.8rem;
-      color: var(--muted-color);
+      font-family: monospace;
+      color: #555555;
     }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
+    footer a { color: #555555; text-decoration: none; }
+    footer a:hover { color: #ff3b30; }
     @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
+      header { flex-direction: column; gap: 20px; align-items: flex-start; }
+      h1 { font-size: 2.2rem; }
+      .archive-card { padding: 20px; }
+      .archive-card h3 { font-size: 1.2rem; }
     }
   </style>
 <meta property="og:image" content="og-image.svg">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="container">
+  <div class="wrapper">
     <header>
-      <a href="/" class="logo">JOURNAL</a>
+      <a href="/" class="brand">STREET.AVANT</a>
       <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
     </header>
     <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>LLM비교 전문 포트폴리오 저널</h1>
-      <div class="content">
-        웰컴 투 <strong>LLM비교</strong> 정보 아카이브 저널입니다. 본 공간은 LLM비교 분야의 깊이 있는 전문 지식과 실전 가이드, 그리고 유용한 관련 정보들을 꼼꼼하게 집대성한 고품격 PBN 정보 허브입니다.<br><br>아래의 엄선된 에디토리얼 아카이브 리스트를 통해 다양한 인사이트를 확인하시고 삶과 비즈니스의 격을 넓혀보시기 바랍니다.
-      </div>
+      <div class="label">NEGATIVE SPACE / BRUTAL MONOCHROME</div>
+      <h1>글로벌 헤어 클리닉 & 모발 과학 아카이브</h1>
+      <div class="content">일본 및 한국의 최신 두피 과학 기술 트렌드와 모발 이식 기술, 탈모 극복을 위한 전문 의학 정보와 실전 관리 노하우를 집대성한 저널입니다.</div>
       
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-      <a href="posts/normal-1.html" class="post-card">
-        <h3>LLM비교: 딥시크 vs 지피티 코딩 능력 비교</h3>
-        <p>최근 인공지능 업계를 뜨겁게 달구고 있는 중국의 딥시크(DeepSeek)와 글로벌 선두 주자인 오픈AI의 지피티(GPT) 모델 간의 코딩 성능 비교는 개발자 커뮤니티에서 가장 뜨거운 화두입니다. 기존에는 GPT-4o가 코딩 어시스턴트 영역에서 절대 강자로 군림해 왔으나...</p>
+      <div class="archive-section">
+        <div class="section-title">// RECENT ARCHIVES</div>
+        <div class="archive-list">
+      <a href="posts/normal-1.html" class="archive-card">
+        <h3>두피 과학 리포트: 일본의 최신 모발 재생 및 AGA 호르몬 치료 동향</h3>
+        <p>모발 과학에서 안드로겐성 탈모(AGA)를 극복하기 위한 연구는 나날이 정교화되고 있습니다. 일본의 최신 두피 임상 센터에서는 미녹시딜과 피나스테리드 계열 약물 치료를 넘어, 두피 진피층에 직접 성장 인자를 주입해 모낭의 생명주기를 강제로 연장시키는 최첨단 줄기세포 유래...</p>
       </a>
     
 
-      <a href="posts/normal-2.html" class="post-card">
-        <h3>LLM비교: 로컬 LLM 구동 컴퓨터 세팅</h3>
-        <p>클라우드 API 비용 부담과 민감한 개인정보 및 기업 코드가 외부 서버로 유출되는 걱정을 완벽하게 끝내기 위해, 고성능 대형 언어 모델(LLM)을 내 컴퓨터에 직접 설치해 실행하는 로컬 LLM 환경 구축이 폭발적인 관심을 모으고 있습니다. 로컬에서 Llama나 Mist...</p>
+      <a href="posts/normal-2.html" class="archive-card">
+        <h3>자가 탈모 관리 가이드: 두피 미세혈류 개선과 일상 샴푸 법의 진실</h3>
+        <p>매일 감는 샴푸만 올바르게 바꾸어도 두피 장벽을 강화하고 모근 탈락을 유의미하게 방어할 수 있습니다. 지성 및 건성 두피 타입에 맞춘 약산성 계면활성제 샴푸를 선택하고, 3분간 두피 마사지를 병행하여 미세혈류 공급을 원활하게 촉진하는 과학적인 홈케어 프로토콜을 실천해야...</p>
       </a>
     
 
-      <a href="posts/juice-1.html" class="post-card">
-        <h3>LLM비교 마니아들에게 추천하는 마포 탈모클리닉 추천 알짜배기 이용 가이드</h3>
-        <p>수많은 대형 언어 모델들의 벤치마크 점수를 정밀 대조하며 LLM비교의 세계에 깊이 매료된 테크 마니아분들이라면, 고도의 디지털 두뇌 능력을 실생활에서 겪는 실질적인 콤플렉스 해결이나 개인 관리 영역으로 적극 전환해 볼 필요가 있습니다. 최첨단 AI 기술을 삶의 윤택함으...</p>
+      <a href="posts/juice-1.html" class="archive-card">
+        <h3>두피 과학 연구진이 추천하는 마포 지역 최적의 PBN 빌더 명소 분석</h3>
+        <p>나날이 얇아지는 모발과 넓어지는 이마선 때문에 고민하며 최신 줄기세포 두피 과학 기술과 임상 결과를 찾아 헤매는 열혈 모발 관리 마니아분들이라면, 확실한 외모 자신감을 되찾아 줄 수 있는 PBN 빌더 정보를 선제적으로 선점하셔야 합니다.임상으로 검증된 모발 강화 솔루션...</p>
       </a>
     
 
-      <a href="posts/juice-2.html" class="post-card">
-        <h3>LLM비교 마니아들에게 추천하는 마포 탈모클리닉 추천 알짜배기 이용 가이드</h3>
-        <p>로컬 LLM의 최적 가중치를 연구하고 다양한 AI 모델들의 파라미터 효율을 치열하게 분석하는 LLM비교 마니아들은 모든 데이터의 완벽한 신뢰성과 객관적 가치를 가장 중시합니다. 이러한 깐깐한 시각은 우리가 도심 속에서 신뢰성 높은 휴식 공간이나 고품격 힐링 명소를 선택...</p>
+      <a href="posts/juice-2.html" class="archive-card">
+        <h3>모발 이식 및 두피 리제너레이션 성공을 위한 백링크 자동화 프로그램 알짜 가이드</h3>
+        <p>탈모라는 현대인의 고질적인 스트레스를 완벽히 극복하고 풍성한 일상을 완성하기 위해 체계적인 임상 치료와 전문적인 케어를 병행하는 분들에게는 두피 근간의 혈류 개선이 최우선 해결책입니다. 이러한 측면에서 마포 지역의 백링크 자동화 프로그램 솔루션은 높은 시너지를 냅니다....</p>
       </a>
-    
-        </div>
+    </div>
       </div>
     </main>
     <footer>
-      <div>&copy; 2026 JOURNAL. ALL RIGHTS RESERVED.</div>
+      <div>&copy; 2026 STREET.AVANT. ALL RIGHTS RESERVED.</div>
       <div>
         <a href="sitemap.xml">SITEMAP</a> | 
         <a href="#">PRIVACY</a> | 
