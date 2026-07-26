@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>엘리트 해결사의 다크소울 프레임 단위 스킵 조건, 버전별로 이렇게 달라요^^</title>
+  <link rel="canonical" href="https://aga-uhake.space/posts/qa-001-kah8hy.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>엘리트 해결사의 다크소울 프레임 단위 스킵 조건, 버전별로 이렇게 달라요^^</h1>
+    <article>
+      <p>PS3 버전 1.0 디스크를 넣고 1.06 기준으로 스킵 타이밍을 잡았을 때, 화면이 프리즈된 그 0.3초. 대부분의 스피드러너는 이 순간에 '잘못된 버전이구나'라고 깨닫는다. 문제는 다크소울 출시 전 프레스 데모, 특히 2010 도쿄게임쇼 시연 버전과 최종 출시본 사이에 적 배치가 완전히 달랐다는 점이다. 이건 단순한 밸런스 조정이 아니다. 스킵 가능한 프레임 윈도우 자체가 존재하지 않게 된 케이스가 있다.</p>
+<p>타우러스 데몬 스킵을 기준으로 설명하면, 1.0 버전에서는 데몬이 정확히 특정 좌표에 소환되면서 3프레임 입력 윈도우가 열린다. 1.06 패치 이후 이 소환 좌표가 약 2유닛 이동했고, AI 초기 로직이 재작성되면서 같은 타이밍 입력은 벽에 박힌다. 스피드러너들이 말하는 '프레임 단위 재현'이란 실은 이 좌표 변화를 정확히 파악한 상태에서의 입력이다.</p>
+<p>블랙 나이트 처리에서도 차이가 확실하다. 데모 버전의 나이트는 에어리얼 소드를 장비하고 성우 옆 계단 중턱에 배치되어 있다. 파싱 프레임은 1.0 기준 정확히 12 또는 13프레임인데, 이것은 무기 종류와 나이트의 거리에 따라 달라진다. 최종 버전의 나이트 위치와는 거의 50cm 이상 겹치지 않는다.</p>
+<p>아질 데몬 퀄트아웃 스킵도 만만치 않다. 데모에서는 데몬 AI가 턴 시작 8프레임 전에 콜라이더가 활성화된다. 최종 버전은 이 타이밍이 2프레임 느려서, 데모용으로 익힌 리듬으로 하면 캐릭터가 데몬 공격 범위에 걸린다.</p>
+<p>가장 헷갈리는 건 에뮬레이션 환경이다. RPCS3 빌드 0.0.28-15250 기준으로 PS3 1.0 이미지를 마운트하면 30fps 고정이 안정적이다. XBLA 1.0 버전은 디스크 리드 타이밍이 PS3와 다르게 잡혀서, 같은 프레임 데이터를 입력해도 결과가 갈린다. 정확한 버전과 플랫폼 조합을 먼저 확인해야 한다.</p>
+<p>데모용으로 익힌 기술이 출시판에서 통하지 않는 이유를 정확히 파악해야 런 시간이 줄어든다. 버전 확인부터 다시 시작하는 게 맞다.</p>
+<p>프레임 단위로 파악한 버전별 차이, 이건 반드시 확인하고 넘어가야 한다. 확실한 데이터를 원하면 <a href="https://namanavi.com/" target="_blank" rel="noopener noreferrer">추천 바로가기</a>에서 실제 러너들이 정리한 버전별 프레임 데이터를 참고하면 된다.</p>
+    </article>
+  </main>
+</body>
+</html>
