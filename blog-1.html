@@ -1,536 +1,534 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가이드 | 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드</title>
-    <meta name="description" content="도메인 지수 유실(탈모)을 방지하고 정밀한 앵커 텍스트 이식을 위한 긴급 실행 가이드. 시간 낭비 없는 절차 중심의 PBN 최적화 로드맵을 제시합니다.">
-    <meta name="keywords" content="도메인 지수, 탈모 방지, 앵커 텍스트, 이식 가이드, PBN 구축">
-    <link rel="canonical" href="https://aga-uhake.space/blog-1.html">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-mono-chrome">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="가이드 | 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드">
-    <meta property="og:description" content="도메인 지수 유실(탈모)을 방지하고 정밀한 앵커 텍스트 이식을 위한 긴급 실행 가이드. 시간 낭비 없는 절차 중심의 PBN 최적화 로드맵을 제시합니다.">
-    
-    <style>
-        /* CSS Reset & Variables */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>가이드 | 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드</title>
+ <meta name="description" content="도메인 지수 유실(탈모)을 방지하고 정밀한 앵커 텍스트 이식을 위한 긴급 실행 가이드. 시간 낭비 없는 절차 중심의 PBN 최적화 로드맵을 제시합니다.">
+ <meta name="keywords" content="도메인 지수, 탈모 방지, 앵커 텍스트, 이식 가이드, PBN 구축">
+ <link rel="canonical" href="https://aga-uhake.space/blog-1.html">
+ 
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="가이드 | 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드">
+ <meta property="og:description" content="도메인 지수 유실(탈모)을 방지하고 정밀한 앵커 텍스트 이식을 위한 긴급 실행 가이드. 시간 낭비 없는 절차 중심의 PBN 최적화 로드맵을 제시합니다.">
+ 
+ <style>
+ /* CSS Reset & Variables */
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
 
-        :root {
-            --color-bg: #ffffff;
-            --color-text: #111111;
-            --color-muted: #767677;
-            --color-border: #000000;
-            --color-accent: #000000;
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --sidebar-width: 320px;
-            --transition-speed: 0.2s;
-        }
+ :root {
+ --color-bg: #ffffff;
+ --color-text: #111111;
+ --color-muted: #767677;
+ --color-border: #000000;
+ --color-accent: #000000;
+ --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ --sidebar-width: 320px;
+ --transition-speed: 0.2s;
+ }
 
-        body {
-            font-family: var(--font-family);
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
+ body {
+ font-family: var(--font-family);
+ background-color: var(--color-bg);
+ color: var(--color-text);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
+ }
 
-        /* Layout Structure */
-        .app-container {
-            display: flex;
-            min-height: 100vh;
-        }
+ /* Layout Structure */
+ .app-container {
+ display: flex;
+ min-height: 100vh;
+ }
 
-        /* Sidebar Navigation (Brutalist Avant-garde Fixed Left) */
-        .x-side-iin6 {
-            width: var(--sidebar-width);
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: var(--color-bg);
-            border-right: 2px solid var(--color-border);
-            padding: 3rem 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            z-index: 100;
-            overflow-y: auto;
-        }
+ /* Sidebar Navigation (Brutalist Avant-garde Fixed Left) */
+ .x-side-iin6 {
+ width: var(--sidebar-width);
+ height: 100vh;
+ position: fixed;
+ top: 0;
+ left: 0;
+ background-color: var(--color-bg);
+ border-right: 2px solid var(--color-border);
+ padding: 3rem 2rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ z-index: 100;
+ overflow-y: auto;
+ }
 
-        .k-head-5ahf {
-            margin-bottom: 3rem;
-        }
+ .k-head-5ahf {
+ margin-bottom: 3rem;
+ }
 
-        .m-txt-z2jp {
-            font-size: 1.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -0.05em;
-            line-height: 1.1;
-            border-bottom: 3px solid var(--color-border);
-            padding-bottom: 1rem;
-            display: block;
-            color: var(--color-text);
-            text-decoration: none;
-        }
+ .m-txt-z2jp {
+ font-size: 1.5rem;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: -0.05em;
+ line-height: 1.1;
+ border-bottom: 3px solid var(--color-border);
+ padding-bottom: 1rem;
+ display: block;
+ color: var(--color-text);
+ text-decoration: none;
+ }
 
-        .m-txt-z2jp span {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-top: 0.5rem;
-            color: var(--color-muted);
-            letter-spacing: 0;
-        }
+ .m-txt-z2jp span {
+ display: block;
+ font-size: 0.85rem;
+ font-weight: 500;
+ margin-top: 0.5rem;
+ color: var(--color-muted);
+ letter-spacing: 0;
+ }
 
-        .t-card-16v6-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+ .t-card-16v6-list {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ }
 
-        .t-card-16v6-item a {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-text);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e5e5e5;
-            transition: border-color var(--transition-speed);
-        }
+ .t-card-16v6-item a {
+ font-size: 1rem;
+ font-weight: 700;
+ color: var(--color-text);
+ text-decoration: none;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0.75rem 0;
+ border-bottom: 1px solid #e5e5e5;
+ transition: border-color var(--transition-speed);
+ }
 
-        .t-card-16v6-item a:hover {
-            border-bottom-color: var(--color-border);
-        }
+ .t-card-16v6-item a:hover {
+ border-bottom-color: var(--color-border);
+ }
 
-        .t-card-16v6-item a::after {
-            content: "→";
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
+ .t-card-16v6-item a::after {
+ content: "→";
+ font-size: 1.1rem;
+ font-weight: 300;
+ }
 
-        .side-footer {
-            margin-top: 3rem;
-            font-size: 0.75rem;
-            color: var(--color-muted);
-            line-height: 1.5;
-        }
+ .side-footer {
+ margin-top: 3rem;
+ font-size: 0.75rem;
+ color: var(--color-muted);
+ line-height: 1.5;
+ }
 
-        /* Main Content Area */
-        .main-content {
-            margin-left: var(--sidebar-width);
-            flex-grow: 1;
-            padding: 5rem 6rem;
-            max-width: 1100px;
-        }
+ /* Main Content Area */
+ .main-content {
+ margin-left: var(--sidebar-width);
+ flex-grow: 1;
+ padding: 5rem 6rem;
+ max-width: 1100px;
+ }
 
-        /* Header / Hero Section */
-        .hero-section {
-            margin-bottom: 5rem;
-            border-bottom: 2px solid var(--color-border);
-            padding-bottom: 3rem;
-        }
+ /* Header / Hero Section */
+ .hero-section {
+ margin-bottom: 5rem;
+ border-bottom: 2px solid var(--color-border);
+ padding-bottom: 3rem;
+ }
 
-        .hero-tag {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--color-muted);
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            border: 1px solid var(--color-border);
-            padding: 0.25rem 0.75rem;
-        }
+ .hero-tag {
+ font-size: 0.9rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: var(--color-muted);
+ margin-bottom: 1.5rem;
+ display: inline-block;
+ border: 1px solid var(--color-border);
+ padding: 0.25rem 0.75rem;
+ }
 
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.05;
-            letter-spacing: -0.04em;
-            margin-bottom: 2rem;
-            word-break: keep-all;
-        }
+ .hero-title {
+ font-size: 3.5rem;
+ font-weight: 900;
+ line-height: 1.05;
+ letter-spacing: -0.04em;
+ margin-bottom: 2rem;
+ word-break: keep-all;
+ }
 
-        .hero-lead {
-            font-size: 1.35rem;
-            font-weight: 500;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            word-break: keep-all;
-        }
+ .hero-lead {
+ font-size: 1.35rem;
+ font-weight: 500;
+ line-height: 1.6;
+ color: #333;
+ max-width: 800px;
+ word-break: keep-all;
+ }
 
-        /* Article Typography & Elements */
-        .article-section {
-            margin-bottom: 4.5rem;
-        }
+ /* Article Typography & Elements */
+ .article-section {
+ margin-bottom: 4.5rem;
+ }
 
-        .section-num {
-            font-size: 1.2rem;
-            font-weight: 900;
-            font-family: monospace;
-            display: block;
-            margin-bottom: 0.5rem;
-            border-bottom: 1px solid var(--color-border);
-            padding-bottom: 0.25rem;
-            width: fit-content;
-        }
+ .section-num {
+ font-size: 1.2rem;
+ font-weight: 900;
+ font-family: monospace;
+ display: block;
+ margin-bottom: 0.5rem;
+ border-bottom: 1px solid var(--color-border);
+ padding-bottom: 0.25rem;
+ width: fit-content;
+ }
 
-        .section-title {
-            font-size: 2rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
-            word-break: keep-all;
-        }
+ .section-title {
+ font-size: 2rem;
+ font-weight: 800;
+ letter-spacing: -0.03em;
+ margin-bottom: 1.5rem;
+ word-break: keep-all;
+ }
 
-        .article-p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #222;
-            margin-bottom: 1.5rem;
-            word-break: keep-all;
-        }
+ .article-p {
+ font-size: 1.1rem;
+ line-height: 1.8;
+ color: #222;
+ margin-bottom: 1.5rem;
+ word-break: keep-all;
+ }
 
-        .article-p strong {
-            font-weight: 700;
-            background-color: #f3f3f3;
-            padding: 0.1rem 0.3rem;
-        }
+ .article-p strong {
+ font-weight: 700;
+ background-color: #f3f3f3;
+ padding: 0.1rem 0.3rem;
+ }
 
-        /* Swiss Grid / Cards */
-        .swiss-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin: 2.5rem 0;
-        }
+ /* Swiss Grid / Cards */
+ .swiss-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 2rem;
+ margin: 2.5rem 0;
+ }
 
-        .swiss-card {
-            border: 2px solid var(--color-border);
-            padding: 2rem;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+ .swiss-card {
+ border: 2px solid var(--color-border);
+ padding: 2rem;
+ background: #ffffff;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ }
 
-        .swiss-card-title {
-            font-size: 1.25rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
+ .swiss-card-title {
+ font-size: 1.25rem;
+ font-weight: 800;
+ margin-bottom: 1rem;
+ text-transform: uppercase;
+ }
 
-        .swiss-card-body {
-            font-size: 0.95rem;
-            color: #333;
-            line-height: 1.6;
-        }
+ .swiss-card-body {
+ font-size: 0.95rem;
+ color: #333;
+ line-height: 1.6;
+ }
 
-        /* Callout Box */
-        .callout-box {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 3rem;
-            margin: 3.5rem 0;
-            border-left: 8px solid var(--color-muted);
-        }
+ /* Callout Box */
+ .callout-box {
+ background-color: #000000;
+ color: #ffffff;
+ padding: 3rem;
+ margin: 3.5rem 0;
+ border-left: 8px solid var(--color-muted);
+ }
 
-        .callout-title {
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-        }
+ .callout-title {
+ font-size: 1.5rem;
+ font-weight: 900;
+ margin-bottom: 1rem;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ }
 
-        .callout-desc {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            opacity: 0.9;
-        }
+ .callout-desc {
+ font-size: 1.05rem;
+ line-height: 1.7;
+ opacity: 0.9;
+ }
 
-        /* FAQ Accordion-like layout */
-        .faq-list {
-            margin-top: 2rem;
-            border-top: 2px solid var(--color-border);
-        }
+ /* FAQ Accordion-like layout */
+ .faq-list {
+ margin-top: 2rem;
+ border-top: 2px solid var(--color-border);
+ }
 
-        .faq-item {
-            border-bottom: 1px solid #e5e5e5;
-            padding: 1.5rem 0;
-        }
+ .faq-item {
+ border-bottom: 1px solid #e5e5e5;
+ padding: 1.5rem 0;
+ }
 
-        .faq-question {
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-            display: flex;
-            gap: 1rem;
-        }
+ .faq-question {
+ font-size: 1.2rem;
+ font-weight: 800;
+ margin-bottom: 0.75rem;
+ display: flex;
+ gap: 1rem;
+ }
 
-        .faq-question span {
-            font-family: monospace;
-            color: var(--color-muted);
-        }
+ .faq-question span {
+ font-family: monospace;
+ color: var(--color-muted);
+ }
 
-        .faq-answer {
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.7;
-            padding-left: 2rem;
-        }
+ .faq-answer {
+ font-size: 1rem;
+ color: #444;
+ line-height: 1.7;
+ padding-left: 2rem;
+ }
 
-        /* Mobile Header / Hamburger Menu (768px Breakpoint) */
-        .mobile-header {
-            display: none;
-            background-color: var(--color-bg);
-            border-bottom: 2px solid var(--color-border);
-            padding: 1rem 1.5rem;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 110;
-            justify-content: space-between;
-            align-items: center;
-        }
+ /* Mobile Header / Hamburger Menu (768px Breakpoint) */
+ .mobile-header {
+ display: none;
+ background-color: var(--color-bg);
+ border-bottom: 2px solid var(--color-border);
+ padding: 1rem 1.5rem;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: 110;
+ justify-content: space-between;
+ align-items: center;
+ }
 
-        .mobile-brand {
-            font-size: 1.1rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: var(--color-text);
-        }
+ .mobile-brand {
+ font-size: 1.1rem;
+ font-weight: 900;
+ text-transform: uppercase;
+ text-decoration: none;
+ color: var(--color-text);
+ }
 
-        .hamburger-btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-            cursor: pointer;
-            display: none;
-        }
+ .hamburger-btn {
+ background: none;
+ border: none;
+ font-size: 1.5rem;
+ font-weight: 700;
+ cursor: pointer;
+ display: none;
+ }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .mobile-header {
-                display: flex;
-            }
+ /* Responsive Styles */
+ @media (max-width: 768px) {
+ .mobile-header {
+ display: flex;
+ }
 
-            .hamburger-btn {
-                display: block;
-            }
+ .hamburger-btn {
+ display: block;
+ }
 
-            .x-side-iin6 {
-                transform: translateX(-100%);
-                transition: transform var(--transition-speed) ease-in-out;
-                width: 100%;
-                height: calc(100vh - 60px);
-                top: 60px;
-                border-right: none;
-                border-bottom: 2px solid var(--color-border);
-                padding: 2rem;
-            }
+ .x-side-iin6 {
+ transform: translateX(-100%);
+ transition: transform var(--transition-speed) ease-in-out;
+ width: 100%;
+ height: calc(100vh - 60px);
+ top: 60px;
+ border-right: none;
+ border-bottom: 2px solid var(--color-border);
+ padding: 2rem;
+ }
 
-            .x-side-iin6.is-active {
-                transform: translateX(0);
-            }
+ .x-side-iin6.is-active {
+ transform: translateX(0);
+ }
 
-            .main-content {
-                margin-left: 0;
-                padding: 6rem 1.5rem 3rem 1.5rem;
-            }
+ .main-content {
+ margin-left: 0;
+ padding: 6rem 1.5rem 3rem 1.5rem;
+ }
 
-            .hero-title {
-                font-size: 2.25rem;
-            }
+ .hero-title {
+ font-size: 2.25rem;
+ }
 
-            .hero-lead {
-                font-size: 1.1rem;
-            }
+ .hero-lead {
+ font-size: 1.1rem;
+ }
 
-            .swiss-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
+ .swiss-grid {
+ grid-template-columns: 1fr;
+ gap: 1.5rem;
+ }
 
-            .section-title {
-                font-size: 1.6rem;
-            }
+ .section-title {
+ font-size: 1.6rem;
+ }
 
-            .callout-box {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
-  <meta property="og:url" content="https://aga-uhake.space/blog-1.html">
+ .callout-box {
+ padding: 2rem 1.5rem;
+ }
+ }
+ </style>
+ <meta property="og:url" content="https://aga-uhake.space/blog-1.html">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
 
-    <!-- Mobile Header -->
-    <header class="mobile-header">
-        <a href="#" class="mobile-brand">지수 성장 클리닉</a>
-        <button class="hamburger-btn" id="menu-toggle" aria-label="메뉴 열기">☰</button>
-    </header>
+ <!-- Mobile Header -->
+ <header class="mobile-header">
+ <a href="#" class="mobile-brand">지수 성장 클리닉</a>
+ <button class="hamburger-btn" id="menu-toggle" aria-label="메뉴 열기">☰</button>
+ </header>
 
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <aside class="x-side-iin6" id="sidebar">
-            <div class="k-head-5ahf">
-                <a href="#" class="m-txt-z2jp">
-                    지수 성장 클리닉
-                    <span>도메인 지수 탈모 방지 가이드</span>
-                </a>
-            </div>
+ <div class="app-container">
+ <!-- Sidebar Navigation -->
+ <aside class="x-side-iin6" id="sidebar">
+ <div class="k-head-5ahf">
+ <a href="#" class="m-txt-z2jp">
+ 지수 성장 클리닉
+ <span>도메인 지수 탈모 방지 가이드</span>
+ </a>
+ </div>
 
-            <nav>
-                <ul class="t-card-16v6-list">
-                    <li class="t-card-16v6-item"><a href="#intro">도메인 탈모 현상</a></li>
-                    <li class="t-card-16v6-item"><a href="#protocol">정밀 이식 프로토콜</a></li>
-                    <li class="t-card-16v6-item"><a href="#pbn">PBN 구축 전략</a></li>
-                    <li class="t-card-16v6-item"><a href="#faq">자주 묻는 질문</a></li>
-                </ul>
-            </nav>
+ <nav>
+ <ul class="t-card-16v6-list">
+ <li class="t-card-16v6-item"><a href="#intro">도메인 탈모 현상</a></li>
+ <li class="t-card-16v6-item"><a href="#protocol">정밀 이식 프로토콜</a></li>
+ <li class="t-card-16v6-item"><a href="#pbn">PBN 구축 전략</a></li>
+ <li class="t-card-16v6-item"><a href="#faq">자주 묻는 질문</a></li>
+ </ul>
+ </nav>
 
-            <div class="side-footer">
-                <p>© 지수 성장 클리닉. All rights reserved.</p>
-                <p>본 가이드는 도메인 지수 보존과 앵커 텍스트 이식을 위한 전문 엔지니어링 매뉴얼입니다.</p>
-            </div>
-        </aside>
+ <div class="side-footer">
+ <p>© 지수 성장 클리닉. All rights reserved.</p>
+ <p>본 가이드는 도메인 지수 보존과 앵커 텍스트 이식을 위한 전문 엔지니어링 매뉴얼입니다.</p>
+ </div>
+ </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Hero Section -->
-            <section class="hero-section" id="intro">
-                <span class="hero-tag">Core Protocol</span>
-                <h1 class="hero-title">지수 낙엽화를 멈춰라:<br>도메인 탈모 방지와 극단적 앵커 이식 가이드</h1>
-                <p class="hero-lead">
-                    아무도 말하지 않는 진실: 무분별한 백링크는 지수를 올리는 것이 아니라, 도메인의 기초 체력을 갉아먹는 '탈모'를 유발합니다. 우리는 본질을 관통하는 뼈아픈 PBN 생존 기술과 정밀한 이식 방법론을 직접적으로 제시합니다.
-                </p>
-            </section>
+ <!-- Main Content -->
+ <main class="main-content">
+ <!-- Hero Section -->
+ <section class="hero-section" id="intro">
+ <span class="hero-tag">Core Protocol</span>
+ <h1 class="hero-title">지수 낙엽화를 멈춰라:<br>도메인 탈모 방지와 극단적 앵커 이식 가이드</h1>
+ <p class="hero-lead">
+ 아무도 말하지 않는 진실: 무분별한 백링크는 지수를 올리는 것이 아니라, 도메인의 기초 체력을 갉아먹는 '탈모'를 유발합니다. 우리는 본질을 관통하는 뼈아픈 PBN 생존 기술과 정밀한 이식 방법론을 직접적으로 제시합니다.
+ </p>
+ </section>
 
-            <!-- Section 1: The Reality -->
-            <section class="article-section">
-                <span class="section-num">01 / CONCEPT</span>
-                <h2 class="section-title">왜 당신의 도메인은 서서히 말라죽는가?</h2>
-                <p class="article-p">
-                    스팸 필터가 정교해진 현대 검색 엔진 생태계에서, 단순 양치기식 링크 빌딩은 도메인에 치명적인 독을 주입하는 것과 같습니다. 지수가 유실되는 현상, 일명 <strong>'도메인 지수 탈모'</strong>는 잘못된 유입 통로와 정제되지 않은 앵커 텍스트의 무차별적인 남용에서 시작됩니다.
-                </p>
-                <p class="article-p">
-                    도메인의 권위(Authority)는 흐르는 물과 같아서, 받아들이는 그릇의 균열을 막지 못하면 아무리 많은 링크 주스(Link Juice)를 부어도 결국 바닥을 드러냅니다. 지수를 온전히 보존하기 위해서는 링크가 걸리는 타겟 페이지의 맥락적 무결성이 확보되어야만 합니다.
-                </p>
-            </section>
+ <!-- Section 1: The Reality -->
+ <section class="article-section">
+ <span class="section-num">01 / CONCEPT</span>
+ <h2 class="section-title">왜 당신의 도메인은 서서히 말라죽는가?</h2>
+ <p class="article-p">
+ 스팸 필터가 정교해진 현대 검색 엔진 생태계에서, 단순 양치기식 링크 빌딩은 도메인에 치명적인 독을 주입하는 것과 같습니다. 지수가 유실되는 현상, 일명 <strong>'도메인 지수 탈모'</strong>는 잘못된 유입 통로와 정제되지 않은 앵커 텍스트의 무차별적인 남용에서 시작됩니다.
+ </p>
+ <p class="article-p">
+ 도메인의 권위(Authority)는 흐르는 물과 같아서, 받아들이는 그릇의 균열을 막지 못하면 아무리 많은 링크 주스(Link Juice)를 부어도 결국 바닥을 드러냅니다. 지수를 온전히 보존하기 위해서는 링크가 걸리는 타겟 페이지의 맥락적 무결성이 확보되어야만 합니다.
+ </p>
+ </section>
 
-            <!-- Section 2: Swiss Grid Cards -->
-            <section class="article-section" id="protocol">
-                <span class="section-num">02 / PROTOCOL</span>
-                <h2 class="section-title">정밀 앵커 텍스트 이식의 2대 원칙</h2>
-                <p class="article-p">
-                    무조건적인 키워드 반복은 자살 행위입니다. 타겟 사이트의 안전과 성장을 보장하기 위해 설계된 정밀 이식 구조를 확인하십시오.
-                </p>
+ <!-- Section 2: Swiss Grid Cards -->
+ <section class="article-section" id="protocol">
+ <span class="section-num">02 / PROTOCOL</span>
+ <h2 class="section-title">정밀 앵커 텍스트 이식의 2대 원칙</h2>
+ <p class="article-p">
+ 무조건적인 키워드 반복은 자살 행위입니다. 타겟 사이트의 안전과 성장을 보장하기 위해 설계된 정밀 이식 구조를 확인하십시오.
+ </p>
 
-                <div class="swiss-grid">
-                    <div class="swiss-card">
-                        <h3 class="swiss-card-title">1. 맥락적 동질성 (LSI 배합)</h3>
-                        <p class="swiss-card-body">
-                            타겟 키워드와 주변 텍스트의 의미론적 연관성을 극대화합니다. 검색 엔진의 자연어 처리 AI가 링크 주변의 단어들을 분석할 때, 인위적인 흐름이 추호도 없도록 완전히 녹여내야 합니다.
-                        </p>
-                    </div>
-                    <div class="swiss-card">
-                        <h3 class="swiss-card-title">2. 비대칭적 비율 설계</h3>
-                        <p class="swiss-card-body">
-                            완전 일치(Exact Match) 앵커의 비율을 극도로 제한하고, 브랜드명, 도메인 주소(Raw URL), 일반 지시어 등을 변칙적으로 조합하여 패턴 인식을 무력화하는 방어막을 구축합니다.
-                        </p>
-                    </div>
-                </div>
-            </section>
+ <div class="swiss-grid">
+ <div class="swiss-card">
+ <h3 class="swiss-card-title">1. 맥락적 동질성 (LSI 배합)</h3>
+ <p class="swiss-card-body">
+ 타겟 키워드와 주변 텍스트의 의미론적 연관성을 극대화합니다. 검색 엔진의 자연어 처리 AI가 링크 주변의 단어들을 분석할 때, 인위적인 흐름이 추호도 없도록 완전히 녹여내야 합니다.
+ </p>
+ </div>
+ <div class="swiss-card">
+ <h3 class="swiss-card-title">2. 비대칭적 비율 설계</h3>
+ <p class="swiss-card-body">
+ 완전 일치(Exact Match) 앵커의 비율을 극도로 제한하고, 브랜드명, 도메인 주소(Raw URL), 일반 지시어 등을 변칙적으로 조합하여 패턴 인식을 무력화하는 방어막을 구축합니다.
+ </p>
+ </div>
+ </div>
+ </section>
 
-            <!-- Section 3: Callout Bold Opinion -->
-            <section class="article-section" id="pbn">
-                <span class="section-num">03 / OPINION</span>
-                <h2 class="section-title">PBN 구축에 대한 가식 없는 직설</h2>
-                
-                <div class="callout-box">
-                    <h3 class="callout-title">"값싼 PBN은 도메인의 사형 선고와 같습니다."</h3>
-                    <p class="callout-desc">
-                        시중에서 떠도는 수십만 원짜리 조잡한 PBN 네트워크는 구글의 스팸 브레인에 의해 실시간으로 모니터링되고 있습니다. 호스팅 IP 대역을 분산하는 것은 기초 중의 기초일 뿐입니다. 사이트의 역사(History), 테마의 통일성, 그리고 실제 유입 트래픽이 존재하지 않는 PBN은 그 자체로 시한폭탄입니다.
-                    </p>
-                </div>
+ <!-- Section 3: Callout Bold Opinion -->
+ <section class="article-section" id="pbn">
+ <span class="section-num">03 / OPINION</span>
+ <h2 class="section-title">PBN 구축에 대한 가식 없는 직설</h2>
+ 
+ <div class="callout-box">
+ <h3 class="callout-title">"값싼 PBN은 도메인의 사형 선고와 같습니다."</h3>
+ <p class="callout-desc">
+ 시중에서 떠도는 수십만 원짜리 조잡한 PBN 네트워크는 구글의 스팸 브레인에 의해 실시간으로 모니터링되고 있습니다. 호스팅 IP 대역을 분산하는 것은 기초 중의 기초일 뿐입니다. 사이트의 역사(History), 테마의 통일성, 그리고 실제 유입 트래픽이 존재하지 않는 PBN은 그 자체로 시한폭탄입니다.
+ </p>
+ </div>
 
-                <p class="article-p">
-                    우리가 지향하는 고밀도 PBN 최적화 로드맵은 단순히 링크를 꽂아 넣는 기계적 작업을 거부합니다. 만료 도메인이 가지고 있던 기존의 건강한 지수(Juice)를 고스란히 정화하여, 타겟 도메인의 가장 취약한 부위에 정밀하게 이식하는 엔지니어링 프로세스에 가깝습니다.
-                </p>
-            </section>
+ <p class="article-p">
+ 우리가 지향하는 고밀도 PBN 최적화 로드맵은 단순히 링크를 꽂아 넣는 기계적 작업을 거부합니다. 만료 도메인이 가지고 있던 기존의 건강한 지수(Juice)를 고스란히 정화하여, 타겟 도메인의 가장 취약한 부위에 정밀하게 이식하는 엔지니어링 프로세스에 가깝습니다.
+ </p>
+ </section>
 
-            <!-- Section 4: FAQ -->
-            <section class="article-section" id="faq">
-                <span class="section-num">04 / FAQ</span>
-                <h2 class="section-title">자주 제기되는 의문과 진실</h2>
-                
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <h3 class="faq-question"><span>Q.</span> 도메인 지수 유실(탈모)의 초기 증상은 무엇인가요?</h3>
-                        <p class="faq-answer">
-                            특정 키워드의 순위가 변동성 없이 수 주간 서서히 하락하거나, 새로 발행하는 콘텐츠의 색인 속도가 비정상적으로 느려진다면 이미 내부 링크 지수 분배 시스템에 균열이 가고 있음을 의미합니다.
-                        </p>
-                    </div>
-                    <div class="faq-item">
-                        <h3 class="faq-question"><span>Q.</span> 앵커 텍스트 비율은 어떻게 가져가는 것이 안전합니까?</h3>
-                        <p class="faq-answer">
-                            정답은 정해져 있지 않지만, 안전 영역을 확보하려면 완전 일치 키워드 비율을 전체 백링크의 5% 미만으로 유지하고, 자연스러운 문장형(LSI) 및 브랜드 키워드를 80% 이상 배치하는 비대칭 배합을 권장합니다.
-                        </p>
-                    </div>
-                    <div class="faq-item">
-                        <h3 class="faq-question"><span>Q.</span> 기존에 잘못 이식된 링크는 모두 삭제해야 합니까?</h3>
-                        <p class="faq-answer">
-                            모든 링크를 삭제할 필요는 없으며, 제어가 불가능한 저품질 링크는 구글 거부 도구(Disavow Tool)를 통해 정밀하게 차단하는 동시에 양질의 맥락적 링크를 새롭게 이식하여 희석시키는 것이 훨씬 효과적입니다.
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+ <!-- Section 4: FAQ -->
+ <section class="article-section" id="faq">
+ <span class="section-num">04 / FAQ</span>
+ <h2 class="section-title">자주 제기되는 의문과 진실</h2>
+ 
+ <div class="faq-list">
+ <div class="faq-item">
+ <h3 class="faq-question"><span>Q.</span> 도메인 지수 유실(탈모)의 초기 증상은 무엇인가요?</h3>
+ <p class="faq-answer">
+ 특정 키워드의 순위가 변동성 없이 수 주간 서서히 하락하거나, 새로 발행하는 콘텐츠의 색인 속도가 비정상적으로 느려진다면 이미 내부 링크 지수 분배 시스템에 균열이 가고 있음을 의미합니다.
+ </p>
+ </div>
+ <div class="faq-item">
+ <h3 class="faq-question"><span>Q.</span> 앵커 텍스트 비율은 어떻게 가져가는 것이 안전합니까?</h3>
+ <p class="faq-answer">
+ 정답은 정해져 있지 않지만, 안전 영역을 확보하려면 완전 일치 키워드 비율을 전체 백링크의 5% 미만으로 유지하고, 자연스러운 문장형(LSI) 및 브랜드 키워드를 80% 이상 배치하는 비대칭 배합을 권장합니다.
+ </p>
+ </div>
+ <div class="faq-item">
+ <h3 class="faq-question"><span>Q.</span> 기존에 잘못 이식된 링크는 모두 삭제해야 합니까?</h3>
+ <p class="faq-answer">
+ 모든 링크를 삭제할 필요는 없으며, 제어가 불가능한 저품질 링크는 구글 거부 도구(Disavow Tool)를 통해 정밀하게 차단하는 동시에 양질의 맥락적 링크를 새롭게 이식하여 희석시키는 것이 훨씬 효과적입니다.
+ </p>
+ </div>
+ </div>
+ </section>
+ </main>
+ </div>
 
-    <script>
-        // Hamburger Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
+ <script>
+ // Hamburger Menu Toggle
+ const menuToggle = document.getElementById('menu-toggle');
+ const sidebar = document.getElementById('sidebar');
 
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('is-active');
-            menuToggle.textContent = sidebar.classList.contains('is-active') ? '✕' : '☰';
-        });
+ menuToggle.addEventListener('click', () => {
+ sidebar.classList.toggle('is-active');
+ menuToggle.textContent = sidebar.classList.contains('is-active') ? '✕' : '☰';
+ });
 
-        // Close sidebar on link click (mobile)
-        const sidebarLinks = document.querySelectorAll('.t-card-16v6-item a');
-        sidebarLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    sidebar.classList.remove('is-active');
-                    menuToggle.textContent = '☰';
-                }
-            });
-        });
-    </script>
+ // Close sidebar on link click (mobile)
+ const sidebarLinks = document.querySelectorAll('.t-card-16v6-item a');
+ sidebarLinks.forEach(link => {
+ link.addEventListener('click', () => {
+ if (window.innerWidth <= 768) {
+ sidebar.classList.remove('is-active');
+ menuToggle.textContent = '☰';
+ }
+ });
+ });
+ </script>
 </body>
 </html>

@@ -1,520 +1,518 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도메인 지수 유지 전략 비교: 정밀 앵커 이식 vs 일반 백링크 | 지수 성장 클리닉</title>
-    <meta name="description" content="도메인 지수 하락(탈모)을 방지하는 무지성 링크 빌딩과 고정밀 앵커 텍스트 이식 기술의 핵심 차이를 비교합니다. 안전하고 지속 가능한 SEO 성장을 위한 대안 분석 가이드.">
-    <meta name="keywords" content="도메인 지수, 탈모 방지, 앵커 텍스트, 링크 빌딩, SEO 비교, 백링크 분석">
-    <link rel="canonical" href="https://aga-uhake.space/blog-2.html">
-    
-    <!-- 디자인 시스템 메타 태그 -->
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-noir-gold">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="도메인 지수 유지 전략 비교: 정밀 앵커 이식 vs 일반 백링크 | 지수 성장 클리닉">
-    <meta property="og:description" content="도메인 지수 하락(탈모)을 방지하는 무지성 링크 빌딩과 고정밀 앵커 텍스트 이식 기술의 핵심 차이를 비교합니다. 안전하고 지속 가능한 SEO 성장을 위한 대안 분석 가이드.">
-    <meta property="og:url" content="https://aga-uhake.space/blog-2.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>도메인 지수 유지 전략 비교: 정밀 앵커 이식 vs 일반 백링크 | 지수 성장 클리닉</title>
+ <meta name="description" content="도메인 지수 하락(탈모)을 방지하는 무지성 링크 빌딩과 고정밀 앵커 텍스트 이식 기술의 핵심 차이를 비교합니다. 안전하고 지속 가능한 SEO 성장을 위한 대안 분석 가이드.">
+ <meta name="keywords" content="도메인 지수, 탈모 방지, 앵커 텍스트, 링크 빌딩, SEO 비교, 백링크 분석">
+ <link rel="canonical" href="https://aga-uhake.space/blog-2.html">
+ 
+ <!-- 디자인 시스템 메타 태그 -->
+ 
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="도메인 지수 유지 전략 비교: 정밀 앵커 이식 vs 일반 백링크 | 지수 성장 클리닉">
+ <meta property="og:description" content="도메인 지수 하락(탈모)을 방지하는 무지성 링크 빌딩과 고정밀 앵커 텍스트 이식 기술의 핵심 차이를 비교합니다. 안전하고 지속 가능한 SEO 성장을 위한 대안 분석 가이드.">
+ <meta property="og:url" content="https://aga-uhake.space/blog-2.html">
 
-    <style>
-        /* Reset & Base Styles */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        :root {
-            --bg-black: #050505;
-            --bg-dark: #0d0d0d;
-            --card-gray: #141414;
-            --border-gold: #3a3220;
-            --border-gray: #222222;
-            --accent-gold: #c5a059;
-            --accent-gold-bright: #e5c07b;
-            --text-white: #f5f5f7;
-            --text-gray: #8e8e93;
-            --text-dark: #515154;
-            --font-serif: 'Times New Roman', Times, 'Noto Serif KR', serif;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+ <style>
+ /* Reset & Base Styles */
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ :root {
+ --bg-black: #050505;
+ --bg-dark: #0d0d0d;
+ --card-gray: #141414;
+ --border-gold: #3a3220;
+ --border-gray: #222222;
+ --accent-gold: #c5a059;
+ --accent-gold-bright: #e5c07b;
+ --text-white: #f5f5f7;
+ --text-gray: #8e8e93;
+ --text-dark: #515154;
+ --font-serif: 'Times New Roman', Times, 'Noto Serif KR', serif;
+ --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+ }
 
-        body {
-            background-color: var(--bg-black);
-            color: var(--text-white);
-            font-family: var(--font-sans);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+ body {
+ background-color: var(--bg-black);
+ color: var(--text-white);
+ font-family: var(--font-sans);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ }
 
-        /* Layout Structure: Brutalist Left Sidebar + Editorial Right Content */
-        .k-foot-mwh8 {
-            display: grid;
-            grid-template-columns: 340px 1fr;
-            min-height: 100vh;
-        }
+ /* Layout Structure: Brutalist Left Sidebar + Editorial Right Content */
+ .k-foot-mwh8 {
+ display: grid;
+ grid-template-columns: 340px 1fr;
+ min-height: 100vh;
+ }
 
-        @media (max-width: 1024px) {
-            .k-foot-mwh8 {
-                grid-template-columns: 1fr;
-            }
-        }
+ @media (max-width: 1024px) {
+ .k-foot-mwh8 {
+ grid-template-columns: 1fr;
+ }
+ }
 
-        /* Left Sidebar - Brutalist Avant-garde */
-        .r-list-cptu {
-            background-color: var(--bg-black);
-            border-right: 1px solid var(--border-gold);
-            padding: 50px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            overflow-y: auto;
-        }
+ /* Left Sidebar - Brutalist Avant-garde */
+ .r-list-cptu {
+ background-color: var(--bg-black);
+ border-right: 1px solid var(--border-gold);
+ padding: 50px 30px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ position: sticky;
+ top: 0;
+ height: 100vh;
+ overflow-y: auto;
+ }
 
-        @media (max-width: 1024px) {
-            .r-list-cptu {
-                position: relative;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid var(--border-gold);
-                padding: 40px 20px;
-            }
-        }
+ @media (max-width: 1024px) {
+ .r-list-cptu {
+ position: relative;
+ height: auto;
+ border-right: none;
+ border-bottom: 1px solid var(--border-gold);
+ padding: 40px 20px;
+ }
+ }
 
-        .brand-title {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.05em;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            line-height: 1.2;
-            margin-bottom: 40px;
-        }
+ .brand-title {
+ font-family: var(--font-serif);
+ font-size: 1.8rem;
+ font-weight: 700;
+ letter-spacing: -0.05em;
+ color: var(--accent-gold);
+ text-transform: uppercase;
+ line-height: 1.2;
+ margin-bottom: 40px;
+ }
 
-        .brand-title span {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            font-family: var(--font-sans);
-            letter-spacing: 0.1em;
-            margin-top: 5px;
-        }
+ .brand-title span {
+ display: block;
+ font-size: 0.9rem;
+ color: var(--text-gray);
+ font-family: var(--font-sans);
+ letter-spacing: 0.1em;
+ margin-top: 5px;
+ }
 
-        .nav-menu {
-            margin-bottom: 60px;
-        }
+ .nav-menu {
+ margin-bottom: 60px;
+ }
 
-        .nav-link {
-            display: block;
-            color: var(--text-gray);
-            text-decoration: none;
-            font-size: 0.95rem;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-gray);
-            transition: color 0.3s ease, padding-left 0.3s ease;
-        }
+ .nav-link {
+ display: block;
+ color: var(--text-gray);
+ text-decoration: none;
+ font-size: 0.95rem;
+ padding: 12px 0;
+ border-bottom: 1px solid var(--border-gray);
+ transition: color 0.3s ease, padding-left 0.3s ease;
+ }
 
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent-gold);
-            padding-left: 8px;
-        }
+ .nav-link:hover, .nav-link.active {
+ color: var(--accent-gold);
+ padding-left: 8px;
+ }
 
-        /* Sidebar Card */
-        .n-card-l4u8 {
-            background-color: var(--card-gray);
-            border: 1px solid var(--border-gold);
-            padding: 24px;
-            margin-top: auto;
-        }
+ /* Sidebar Card */
+ .n-card-l4u8 {
+ background-color: var(--card-gray);
+ border: 1px solid var(--border-gold);
+ padding: 24px;
+ margin-top: auto;
+ }
 
-        .n-card-l4u8 h4 {
-            font-family: var(--font-serif);
-            color: var(--accent-gold);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-        }
+ .n-card-l4u8 h4 {
+ font-family: var(--font-serif);
+ color: var(--accent-gold);
+ font-size: 1.1rem;
+ margin-bottom: 10px;
+ letter-spacing: -0.02em;
+ }
 
-        .n-card-l4u8 p {
-            font-size: 0.85rem;
-            color: var(--text-gray);
-            line-height: 1.5;
-        }
+ .n-card-l4u8 p {
+ font-size: 0.85rem;
+ color: var(--text-gray);
+ line-height: 1.5;
+ }
 
-        /* Right Content Area */
-        .main-content {
-            padding: 80px 8%;
-            background-color: var(--bg-dark);
-        }
+ /* Right Content Area */
+ .main-content {
+ padding: 80px 8%;
+ background-color: var(--bg-dark);
+ }
 
-        @media (max-width: 768px) {
-            .main-content {
-                padding: 50px 20px;
-            }
-        }
+ @media (max-width: 768px) {
+ .main-content {
+ padding: 50px 20px;
+ }
+ }
 
-        /* Editorial Typography */
-        .editorial-header {
-            max-width: 800px;
-            margin-bottom: 80px;
-        }
+ /* Editorial Typography */
+ .editorial-header {
+ max-width: 800px;
+ margin-bottom: 80px;
+ }
 
-        .category-tag {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--accent-gold);
-            display: inline-block;
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--accent-gold);
-            padding-bottom: 4px;
-        }
+ .category-tag {
+ font-size: 0.8rem;
+ text-transform: uppercase;
+ letter-spacing: 0.2em;
+ color: var(--accent-gold);
+ display: inline-block;
+ margin-bottom: 15px;
+ border-bottom: 1px solid var(--accent-gold);
+ padding-bottom: 4px;
+ }
 
-        .editorial-title {
-            font-family: var(--font-serif);
-            font-size: 3.5rem;
-            line-height: 1.15;
-            font-weight: 400;
-            letter-spacing: -0.03em;
-            color: var(--text-white);
-            margin-bottom: 30px;
-        }
+ .editorial-title {
+ font-family: var(--font-serif);
+ font-size: 3.5rem;
+ line-height: 1.15;
+ font-weight: 400;
+ letter-spacing: -0.03em;
+ color: var(--text-white);
+ margin-bottom: 30px;
+ }
 
-        @media (max-width: 768px) {
-            .editorial-title {
-                font-size: 2.2rem;
-            }
-        }
+ @media (max-width: 768px) {
+ .editorial-title {
+ font-size: 2.2rem;
+ }
+ }
 
-        .editorial-lead {
-            font-size: 1.25rem;
-            color: var(--text-gray);
-            line-height: 1.7;
-            font-weight: 300;
-        }
+ .editorial-lead {
+ font-size: 1.25rem;
+ color: var(--text-gray);
+ line-height: 1.7;
+ font-weight: 300;
+ }
 
-        /* Comparison Table Section */
-        .comparison-section {
-            margin-bottom: 100px;
-        }
+ /* Comparison Table Section */
+ .comparison-section {
+ margin-bottom: 100px;
+ }
 
-        .comparison-table-wrapper {
-            overflow-x: auto;
-            border: 1px solid var(--border-gold);
-            background-color: var(--card-gray);
-        }
+ .comparison-table-wrapper {
+ overflow-x: auto;
+ border: 1px solid var(--border-gold);
+ background-color: var(--card-gray);
+ }
 
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            min-width: 600px;
-        }
+ .comparison-table {
+ width: 100%;
+ border-collapse: collapse;
+ text-align: left;
+ min-width: 600px;
+ }
 
-        .comparison-table th, .comparison-table td {
-            padding: 20px 24px;
-            border-bottom: 1px solid var(--border-gray);
-        }
+ .comparison-table th, .comparison-table td {
+ padding: 20px 24px;
+ border-bottom: 1px solid var(--border-gray);
+ }
 
-        .comparison-table th {
-            background-color: #0d0d0d;
-            font-family: var(--font-serif);
-            color: var(--accent-gold);
-            font-size: 1rem;
-            letter-spacing: 0.05em;
-            border-bottom: 2px solid var(--border-gold);
-        }
+ .comparison-table th {
+ background-color: #0d0d0d;
+ font-family: var(--font-serif);
+ color: var(--accent-gold);
+ font-size: 1rem;
+ letter-spacing: 0.05em;
+ border-bottom: 2px solid var(--border-gold);
+ }
 
-        .comparison-table td {
-            font-size: 0.95rem;
-            color: var(--text-white);
-        }
+ .comparison-table td {
+ font-size: 0.95rem;
+ color: var(--text-white);
+ }
 
-        .comparison-table tr:hover td {
-            background-color: rgba(197, 160, 89, 0.03);
-        }
+ .comparison-table tr:hover td {
+ background-color: rgba(197, 160, 89, 0.03);
+ }
 
-        .comparison-table .highlight {
-            color: var(--accent-gold-bright);
-            font-weight: 600;
-        }
+ .comparison-table .highlight {
+ color: var(--accent-gold-bright);
+ font-weight: 600;
+ }
 
-        .comparison-table .negative {
-            color: var(--text-dark);
-        }
+ .comparison-table .negative {
+ color: var(--text-dark);
+ }
 
-        /* Editorial Cards - Brutalist Grid */
-        .r-card-vt3e-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-bottom: 100px;
-        }
+ /* Editorial Cards - Brutalist Grid */
+ .r-card-vt3e-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 30px;
+ margin-bottom: 100px;
+ }
 
-        @media (max-width: 768px) {
-            .r-card-vt3e-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+ @media (max-width: 768px) {
+ .r-card-vt3e-grid {
+ grid-template-columns: 1fr;
+ }
+ }
 
-        .r-card-vt3e {
-            background-color: var(--card-gray);
-            border: 1px solid var(--border-gray);
-            padding: 40px;
-            transition: border-color 0.4s ease;
-        }
+ .r-card-vt3e {
+ background-color: var(--card-gray);
+ border: 1px solid var(--border-gray);
+ padding: 40px;
+ transition: border-color 0.4s ease;
+ }
 
-        .r-card-vt3e:hover {
-            border-color: var(--accent-gold);
-        }
+ .r-card-vt3e:hover {
+ border-color: var(--accent-gold);
+ }
 
-        .r-card-vt3e h3 {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            color: var(--text-white);
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
+ .r-card-vt3e h3 {
+ font-family: var(--font-serif);
+ font-size: 1.8rem;
+ color: var(--text-white);
+ margin-bottom: 20px;
+ font-weight: 400;
+ }
 
-        .r-card-vt3e h3 span {
-            color: var(--accent-gold);
-        }
+ .r-card-vt3e h3 span {
+ color: var(--accent-gold);
+ }
 
-        .r-card-vt3e p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            margin-bottom: 30px;
-            line-height: 1.7;
-        }
+ .r-card-vt3e p {
+ color: var(--text-gray);
+ font-size: 0.95rem;
+ margin-bottom: 30px;
+ line-height: 1.7;
+ }
 
-        .r-card-vt3e-list {
-            list-style: none;
-        }
+ .r-card-vt3e-list {
+ list-style: none;
+ }
 
-        .r-card-vt3e-list li {
-            font-size: 0.9rem;
-            color: var(--text-white);
-            padding: 10px 0;
-            border-bottom: 1px dashed var(--border-gray);
-            display: flex;
-            justify-content: space-between;
-        }
+ .r-card-vt3e-list li {
+ font-size: 0.9rem;
+ color: var(--text-white);
+ padding: 10px 0;
+ border-bottom: 1px dashed var(--border-gray);
+ display: flex;
+ justify-content: space-between;
+ }
 
-        .r-card-vt3e-list li span {
-            color: var(--accent-gold);
-        }
+ .r-card-vt3e-list li span {
+ color: var(--accent-gold);
+ }
 
-        /* FAQ Accordion Section */
-        .faq-section {
-            margin-bottom: 100px;
-            border-top: 1px solid var(--border-gold);
-            padding-top: 80px;
-        }
+ /* FAQ Accordion Section */
+ .faq-section {
+ margin-bottom: 100px;
+ border-top: 1px solid var(--border-gold);
+ padding-top: 80px;
+ }
 
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
-            color: var(--text-white);
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
+ .section-title {
+ font-family: var(--font-serif);
+ font-size: 2.2rem;
+ color: var(--text-white);
+ margin-bottom: 40px;
+ font-weight: 400;
+ }
 
-        .faq-item {
-            border-bottom: 1px solid var(--border-gray);
-            padding: 24px 0;
-        }
+ .faq-item {
+ border-bottom: 1px solid var(--border-gray);
+ padding: 24px 0;
+ }
 
-        .faq-question {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            color: var(--text-white);
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+ .faq-question {
+ font-family: var(--font-serif);
+ font-size: 1.2rem;
+ color: var(--text-white);
+ margin-bottom: 12px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
 
-        .faq-question::after {
-            content: "→";
-            color: var(--accent-gold);
-            font-family: var(--font-sans);
-        }
+ .faq-question::after {
+ content: "→";
+ color: var(--accent-gold);
+ font-family: var(--font-sans);
+ }
 
-        .faq-answer {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+ .faq-answer {
+ color: var(--text-gray);
+ font-size: 0.95rem;
+ line-height: 1.6;
+ }
 
-        /* Footer */
-        .footer-area {
-            border-top: 1px solid var(--border-gray);
-            padding-top: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+ /* Footer */
+ .footer-area {
+ border-top: 1px solid var(--border-gray);
+ padding-top: 40px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 20px;
+ }
 
-        .footer-logo {
-            font-family: var(--font-serif);
-            color: var(--text-dark);
-            font-size: 1rem;
-            letter-spacing: 0.1em;
-        }
+ .footer-logo {
+ font-family: var(--font-serif);
+ color: var(--text-dark);
+ font-size: 1rem;
+ letter-spacing: 0.1em;
+ }
 
-        .footer-copy {
-            color: var(--text-dark);
-            font-size: 0.8rem;
-        }
-    </style>
+ .footer-copy {
+ color: var(--text-dark);
+ font-size: 0.8rem;
+ }
+ </style>
   <meta name="twitter:card" content="summary">
 </head>
 <body>
 
 <div class="k-foot-mwh8">
-    <!-- Left Sidebar -->
-    <aside class="r-list-cptu">
-        <div>
-            <div class="brand-title">
-                CLINIC
-                <span>지수 성장 클리닉</span>
-            </div>
-            
-            <nav class="nav-menu">
-                <a href="/" class="nav-link">홈 (Home)</a>
-                <a href="/compare" class="nav-link active">방법론 비교 (Compare)</a>
-                <a href="/guide" class="nav-link">이식 가이드 (Guide)</a>
-            </nav>
-        </div>
+ <!-- Left Sidebar -->
+ <aside class="r-list-cptu">
+ <div>
+ <div class="brand-title">
+ CLINIC
+ <span>지수 성장 클리닉</span>
+ </div>
+ 
+ <nav class="nav-menu">
+ <a href="/" class="nav-link">홈 (Home)</a>
+ <a href="/compare" class="nav-link active">방법론 비교 (Compare)</a>
+ <a href="/guide" class="nav-link">이식 가이드 (Guide)</a>
+ </nav>
+ </div>
 
-        <div class="n-card-l4u8">
-            <h4>경고: 일시적인 수치</h4>
-            <p>스팸성 백링크로 부풀려진 도메인 점수는 첫 번째 알고리즘 업데이트 주기에 완전히 붕괴됩니다. 본질적인 흐름을 이식해야 합니다.</p>
-        </div>
-    </aside>
+ <div class="n-card-l4u8">
+ <h4>경고: 일시적인 수치</h4>
+ <p>스팸성 백링크로 부풀려진 도메인 점수는 첫 번째 알고리즘 업데이트 주기에 완전히 붕괴됩니다. 본질적인 흐름을 이식해야 합니다.</p>
+ </div>
+ </aside>
 
-    <!-- Right Main Content -->
-    <main class="main-content">
-        <!-- Header -->
-        <header class="editorial-header">
-            <span class="category-tag">Methodology Analysis</span>
-            <h1 class="editorial-title">무의미한 수량 채우기 vs<br>맥락 기반 정밀 앵커 이식</h1>
-            <p class="editorial-lead">
-                수많은 사이트가 백링크 개수 늘리기에 매몰되어 정작 자신의 도메인이 소리 없이 무너지는 줄도 모릅니다. 우리는 링크의 단순 개수가 아닌, 구글이 신뢰할 수밖에 없는 정밀한 맥락적 흐름의 차이를 직설적으로 비교합니다.
-            </p>
-        </header>
+ <!-- Right Main Content -->
+ <main class="main-content">
+ <!-- Header -->
+ <header class="editorial-header">
+ <span class="category-tag">Methodology Analysis</span>
+ <h1 class="editorial-title">무의미한 수량 채우기 vs<br>맥락 기반 정밀 앵커 이식</h1>
+ <p class="editorial-lead">
+ 수많은 사이트가 백링크 개수 늘리기에 매몰되어 정작 자신의 도메인이 소리 없이 무너지는 줄도 모릅니다. 우리는 링크의 단순 개수가 아닌, 구글이 신뢰할 수밖에 없는 정밀한 맥락적 흐름의 차이를 직설적으로 비교합니다.
+ </p>
+ </header>
 
-        <!-- Comparison Table Section -->
-        <section class="comparison-section">
-            <h2 class="section-title">핵심 성능 비교 매트릭스</h2>
-            <div class="comparison-table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>비교 기준</th>
-                            <th>일반 백링크 패키지</th>
-                            <th>정밀 앵커 이식 솔루션</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>이식 방식 (Method)</strong></td>
-                            <td class="negative">자동 프로그램을 통한 무작위 배포</td>
-                            <td class="highlight">도메인 주제와 일치하는 수동 배치</td>
-                        </tr>
-                        <tr>
-                            <td><strong>앵커 텍스트 일치율</strong></td>
-                            <td class="negative">단순 도메인 주소 혹은 무의미한 키워드</td>
-                            <td class="highlight">타겟 페이지의 맥락을 반영한 타이트 매칭</td>
-                        </tr>
-                        <tr>
-                            <td><strong>지수 유지력 (Retention)</strong></td>
-                            <td class="negative">3~6개월 후 급격한 하락 발생 (지수 탈모)</td>
-                            <td class="highlight">구글 인덱스 유지 기간 동안 영구 방어</td>
-                        </tr>
-                        <tr>
-                            <td><strong>패널티 리스크</strong></td>
-                            <td class="negative">매우 높음 (스팸 지수 누적으로 감점)</td>
-                            <td class="highlight">매우 낮음 (자연스러운 인용 구조 형성)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>적용 도메인 선별</strong></td>
-                            <td class="negative">무작위 저가형 PBN 네트워크 혼용</td>
-                            <td class="highlight">자체 엄선된 고지수 에디토리얼 도메인만 엄선</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+ <!-- Comparison Table Section -->
+ <section class="comparison-section">
+ <h2 class="section-title">핵심 성능 비교 매트릭스</h2>
+ <div class="comparison-table-wrapper">
+ <table class="comparison-table">
+ <thead>
+ <tr>
+ <th>비교 기준</th>
+ <th>일반 백링크 패키지</th>
+ <th>정밀 앵커 이식 솔루션</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>이식 방식 (Method)</strong></td>
+ <td class="negative">자동 프로그램을 통한 무작위 배포</td>
+ <td class="highlight">도메인 주제와 일치하는 수동 배치</td>
+ </tr>
+ <tr>
+ <td><strong>앵커 텍스트 일치율</strong></td>
+ <td class="negative">단순 도메인 주소 혹은 무의미한 키워드</td>
+ <td class="highlight">타겟 페이지의 맥락을 반영한 타이트 매칭</td>
+ </tr>
+ <tr>
+ <td><strong>지수 유지력 (Retention)</strong></td>
+ <td class="negative">3~6개월 후 급격한 하락 발생 (지수 탈모)</td>
+ <td class="highlight">구글 인덱스 유지 기간 동안 영구 방어</td>
+ </tr>
+ <tr>
+ <td><strong>패널티 리스크</strong></td>
+ <td class="negative">매우 높음 (스팸 지수 누적으로 감점)</td>
+ <td class="highlight">매우 낮음 (자연스러운 인용 구조 형성)</td>
+ </tr>
+ <tr>
+ <td><strong>적용 도메인 선별</strong></td>
+ <td class="negative">무작위 저가형 PBN 네트워크 혼용</td>
+ <td class="highlight">자체 엄선된 고지수 에디토리얼 도메인만 엄선</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
 
-        <!-- Editorial Cards Section -->
-        <section class="r-card-vt3e-grid">
-            <!-- Card 1 -->
-            <div class="r-card-vt3e">
-                <h3>왜 일반 백링크는 <span>'지수 탈모'</span>를 유발하는가?</h3>
-                <p>
-                    구글 알고리즘은 링크가 걸린 원본 문서의 품질과 맥락을 완벽하게 파악합니다. 아무리 도메인 점수가 높은 곳에서 링크를 받아도, 본문 내용과 전혀 상관없는 뜬금없는 키워드로 앵커 텍스트를 구성하면 스팸으로 분류되어 기존에 쌓아 올린 원본 도메인의 고유 지수마저 급격히 갉아먹게 됩니다.
-                </p>
-                <ul class="r-card-vt3e-list">
-                    <li>무작위 스팸 링크 누적 <span>위험도 극대화</span></li>
-                    <li>주제 불일치로 인한 링크 가치 <span>0에 수렴</span></li>
-                    <li>지속적인 유실로 인한 지수 변동성 <span>통제 불능</span></li>
-                </ul>
-            </div>
+ <!-- Editorial Cards Section -->
+ <section class="r-card-vt3e-grid">
+ <!-- Card 1 -->
+ <div class="r-card-vt3e">
+ <h3>왜 일반 백링크는 <span>'지수 탈모'</span>를 유발하는가?</h3>
+ <p>
+ 구글 알고리즘은 링크가 걸린 원본 문서의 품질과 맥락을 완벽하게 파악합니다. 아무리 도메인 점수가 높은 곳에서 링크를 받아도, 본문 내용과 전혀 상관없는 뜬금없는 키워드로 앵커 텍스트를 구성하면 스팸으로 분류되어 기존에 쌓아 올린 원본 도메인의 고유 지수마저 급격히 갉아먹게 됩니다.
+ </p>
+ <ul class="r-card-vt3e-list">
+ <li>무작위 스팸 링크 누적 <span>위험도 극대화</span></li>
+ <li>주제 불일치로 인한 링크 가치 <span>0에 수렴</span></li>
+ <li>지속적인 유실로 인한 지수 변동성 <span>통제 불능</span></li>
+ </ul>
+ </div>
 
-            <!-- Card 2 -->
-            <div class="r-card-vt3e">
-                <h3>정밀 이식이 가져오는 <span>구조적 안전성</span></h3>
-                <p>
-                    우리는 대상 페이지의 유기적 흐름을 먼저 정밀 분석합니다. 타겟 도메인의 본질적인 주제 의식과 완벽히 부합하는 앵커 텍스트를 직조해 냄으로써, 구글 봇이 이를 스팸이 아닌 '전문적인 인용 데이터'로 판단하도록 만듭니다. 이것이 바로 지수 탈모 없는 영구 방어막의 원리입니다.
-                </p>
-                <ul class="r-card-vt3e-list">
-                    <li>고정밀 수작업 타겟팅 <span>100% 매칭</span></li>
-                    <li>강화된 에디토리얼 필터링 <span>완전 안전</span></li>
-                    <li>시간이 갈수록 견고해지는 <span>도메인 기초 체력</span></li>
-                </ul>
-            </div>
-        </section>
+ <!-- Card 2 -->
+ <div class="r-card-vt3e">
+ <h3>정밀 이식이 가져오는 <span>구조적 안전성</span></h3>
+ <p>
+ 우리는 대상 페이지의 유기적 흐름을 먼저 정밀 분석합니다. 타겟 도메인의 본질적인 주제 의식과 완벽히 부합하는 앵커 텍스트를 직조해 냄으로써, 구글 봇이 이를 스팸이 아닌 '전문적인 인용 데이터'로 판단하도록 만듭니다. 이것이 바로 지수 탈모 없는 영구 방어막의 원리입니다.
+ </p>
+ <ul class="r-card-vt3e-list">
+ <li>고정밀 수작업 타겟팅 <span>100% 매칭</span></li>
+ <li>강화된 에디토리얼 필터링 <span>완전 안전</span></li>
+ <li>시간이 갈수록 견고해지는 <span>도메인 기초 체력</span></li>
+ </ul>
+ </div>
+ </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2 class="section-title">자주 묻는 핵심 쟁점 (FAQ)</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q1. 앵커 텍스트 매칭율이 왜 도메인 방어에 그토록 중요한가요?</div>
-                <div class="faq-answer">
-                    구글은 웹페이지 간의 연관성을 평가할 때 하이퍼링크 주변의 텍스트와 앵커 단어의 연계성을 최우선으로 봅니다. 뜬금없는 맥락에 심어진 링크는 신뢰도 점수를 극도로 저하시키며, 이는 곧 도메인 전체의 권위도 하락으로 이어집니다.
-                </div>
-            </div>
+ <!-- FAQ Section -->
+ <section class="faq-section">
+ <h2 class="section-title">자주 묻는 핵심 쟁점 (FAQ)</h2>
+ 
+ <div class="faq-item">
+ <div class="faq-question">Q1. 앵커 텍스트 매칭율이 왜 도메인 방어에 그토록 중요한가요?</div>
+ <div class="faq-answer">
+ 구글은 웹페이지 간의 연관성을 평가할 때 하이퍼링크 주변의 텍스트와 앵커 단어의 연계성을 최우선으로 봅니다. 뜬금없는 맥락에 심어진 링크는 신뢰도 점수를 극도로 저하시키며, 이는 곧 도메인 전체의 권위도 하락으로 이어집니다.
+ </div>
+ </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Q2. 이미 저품질 백링크로 인해 도메인 지수가 하락 중이라면 복구가 가능합니까?</div>
-                <div class="faq-answer">
-                    이미 유입된 유해 링크는 거부(Disavow) 조치 등을 통해 신속하게 차단하고, 동시에 고품질의 정밀 이식 링크를 주입하여 도메인의 신뢰 비율을 빠르게 정상화해야만 추가적인 지수 탈락을 막을 수 있습니다.
-                </div>
-            </div>
+ <div class="faq-item">
+ <div class="faq-question">Q2. 이미 저품질 백링크로 인해 도메인 지수가 하락 중이라면 복구가 가능합니까?</div>
+ <div class="faq-answer">
+ 이미 유입된 유해 링크는 거부(Disavow) 조치 등을 통해 신속하게 차단하고, 동시에 고품질의 정밀 이식 링크를 주입하여 도메인의 신뢰 비율을 빠르게 정상화해야만 추가적인 지수 탈락을 막을 수 있습니다.
+ </div>
+ </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Q3. 이식 작업 후 반영 기간은 보통 얼마나 걸리나요?</div>
-                <div class="faq-answer">
-                    작업 완료 후 구글 크롤러가 해당 문서를 재수집하고 맥락을 인지하는 데는 통상 몇 주에서 최대 한 달의 시간이 소요되며, 이 과정은 인위적인 개입 없이 자연스럽게 이루어질 때 가장 안전합니다.
-                </div>
-            </div>
-        </section>
+ <div class="faq-item">
+ <div class="faq-question">Q3. 이식 작업 후 반영 기간은 보통 얼마나 걸리나요?</div>
+ <div class="faq-answer">
+ 작업 완료 후 구글 크롤러가 해당 문서를 재수집하고 맥락을 인지하는 데는 통상 몇 주에서 최대 한 달의 시간이 소요되며, 이 과정은 인위적인 개입 없이 자연스럽게 이루어질 때 가장 안전합니다.
+ </div>
+ </div>
+ </section>
 
-        <!-- Footer -->
-        <footer class="footer-area">
-            <div class="footer-logo">지수 성장 클리닉</div>
-            <div class="footer-copy">© 2024 지수 성장 클리닉. All Rights Reserved.</div>
-        </footer>
-    </main>
+ <!-- Footer -->
+ <footer class="footer-area">
+ <div class="footer-logo">지수 성장 클리닉</div>
+ <div class="footer-copy">© 2024 지수 성장 클리닉. All Rights Reserved.</div>
+ </footer>
+ </main>
 </div>
 
 </body>

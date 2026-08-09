@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>프레임 틈새를 탈모처럼 방지하는 테스트 데모 분석 — 앵커 포인트 이식을 위한 실전 가이드입니다 ^^</title>
-  <link rel="canonical" href="https://aga-uhake.space/posts/guide-005-14n6hlf.html">
-  <style>
-    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
-    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
-    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
-    p { margin: 0 0 1em; }
-    a { color: #3182ce; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>프레임 틈새를 탈모처럼 방지하는 테스트 데모 분석 — 앵커 포인트 이식을 위한 실전 가이드입니다 ^^</title>
+ <link rel="canonical" href="https://aga-uhake.space/posts/guide-005-14n6hlf.html">
+ <style>
+ body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+ h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+ h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+ h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+ p { margin: 0 0 1em; }
+ a { color: #3182ce; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ </style>
   <meta property="og:url" content="https://aga-uhake.space/posts/guide-005-14n6hlf.html">
   <meta property="og:title" content="프레임 틈새를 탈모처럼 방지하는 테스트 데모 분석 — 앵커 포인트 이식을 위한 실전 가이드입니다 ^^">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-  <header>
-    <a href="../index.html">← 목록으로 돌아가기</a>
-  </header>
-  <main>
-    <h1>프레임 틈새를 탈모처럼 방지하는 테스트 데모 분석 — 앵커 포인트 이식을 위한 실전 가이드입니다 ^^</h1>
-    <article>
-      <p>2011년 3월, 도쿄 어느 사무실에서 캡처보드에 녹화된 480p 영상 하나가 인터넷을 휩쓸었다. 다크소울 네트워크 테스트 버전.Undead Burg의 돌계단을 올라가는 순간, 숙련자는 Immediately 눈치챘다. 이 적 배치는 정식과 다르다.</p>
+ <header>
+ <a href="./index.html">← 목록으로 돌아가기</a>
+ </header>
+ <main>
+ <h1>프레임 틈새를 탈모처럼 방지하는 테스트 데모 분석 — 앵커 포인트 이식을 위한 실전 가이드입니다 ^^</h1>
+ <article>
+ <p>2011년 3월, 도쿄 어느 사무실에서 캡처보드에 녹화된 480p 영상 하나가 인터넷을 휩쓸었다. 다크소울 네트워크 테스트 버전.Undead Burg의 돌계단을 올라가는 순간, 숙련자는 Immediately 눈치챘다. 이 적 배치는 정식과 다르다.</p>
 <h2>데모 vs 정식: 지형은 같지만 뼈대가 다르다</h2>
 <p>데모 버전의 Undead Burg에는 창병 2명이 계단 중턱에 나란히 서 있었다. 정식 출시 버전에서 이 창병 한 명은 계단 꼭대기 쪽으로 밀려났고, 나머지는 아예 삭제됐다. 이 차이 하나가 스피드러팅 코스를 완전히 뒤흔든 거다. 왜냐하면 데모 기준으로 익힌 적 AI 패턴이 정식에서 통하지 않으니까요. ^^</p>
-<p>Asylum Demon도 마찬가지였다. 데모에선 활을 장착한 상태로 등장했고, 정식에서는 맨손으로 변했다. 이걸 모르고 데모 영상만 보고 루트 짠 러너들이 꽤 있었는데... 안타깝네요, 정말로요.</p>
+<p>Asylum Demon도 마찬가지였다. 데모에선 활을 장착한 상태로 등장했고, 정식에서는 맨손으로 변했다. 이걸 모르고 데모 영상만 보고 루트 짠 러너들이 꽤 있었는데.. 안타깝네요, 정말로요.</p>
 <h2>프레임 단위 스킵의 원래 토대가 된 데모 지형</h2>
 <p>여기서 핵심은 이거다. 데모 버전의 벽면 충돌체(constraint)가 정식보다 약 12~15프레임 정도 느슨했다는 점. 특정 각도에서 대시를 걸면 벽을 관통할 수 있는 갭이 존재했는데, 정식 패치에서 이 충돌박스가 좁혀지면서 해당 스킵은 사실상 불가능해졌다.</p>
 <p>스피드러너 관점에서 이건 재앙이었다. 데모에서 연습한 24프레임 타이밍이 정식에선 아예 동작하지 않는 거니까. 처음엔 조작 실수인 줄 알았다. 수백 번 리트라이하고 나서야 깨달은 거지, 문제는 내 손이 아니라 콜라이더 자체가 바뀌었다는 걸.</p>
@@ -42,7 +42,7 @@
 <h2>원형 구조: 그 480p 영상으로 돌아가서</h2>
 <p>처음에 말한 그 도쿄 사무실의 녹화본. 지금 돌이켜보면 그 영상은 단순한 테스트 기록이 아니었다. 데모의 적 배치와 지형 데이터가 정식에서 어떻게 변했는지 기록한 유일한 증거물 중 하나였고, 그 안에 담긴 14frame의 차이가 수년간의 스킵 연구를 관통하는 핵심 단서가 됐다.</p>
 <p>탈모처럼 빠지는 건 결국 정보의 유효 기간이다. 기록하지 않으면 증발하고, 증발한 건 되살릴 수 없으니까요.</p>
-    </article>
-  </main>
+ </article>
+ </main>
 </body>
 </html>
