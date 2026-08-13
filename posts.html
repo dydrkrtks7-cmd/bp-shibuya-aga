@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/4) · shibuya-aga</title>
+  <meta name="description" content="shibuya-aga에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://aga-uhake.space/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root{--primary:#4a9eff;--accent:#7bc8ff;--bg:#0a0f1e;--bg2:#0f1628;--bg3:#141d35;--text:#d0d8f0;--muted:#6070a0;--border:#1e2840;--radius:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
+header{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.hi{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1200px;margin:0 auto}
+.logo{font-size:1.15rem;font-weight:800;color:var(--accent)}
+.logo small{color:var(--muted);font-weight:400;font-size:.78rem;margin-left:6px}
+nav a{font-size:.86rem;color:var(--muted);margin-left:20px;transition:.2s}
+nav a:hover{color:var(--accent)}
+.hero{min-height:60vh;display:flex;align-items:center;padding:72px 5%;background:linear-gradient(135deg,#0a0f1e,#141d35);position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(74,158,255,.08),transparent 70%)}
+.hc{max-width:800px;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.25);border-radius:50px;padding:4px 12px;font-size:.78rem;color:var(--primary);margin-bottom:20px}
+.hc h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.2;letter-spacing:-.5px;margin-bottom:14px}
+.hc h1 em{color:var(--accent);font-style:normal}
+.hsub{font-size:.95rem;color:var(--muted);margin-bottom:28px;line-height:1.8}
+section{padding:64px 5%}
+.si{max-width:1200px;margin:0 auto}
+.sh{text-align:center;margin-bottom:44px}
+.stag{display:inline-block;background:rgba(74,158,255,.1);color:var(--primary);font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:1px;margin-bottom:10px}
+.sh h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:900}
+.sh p{color:var(--muted);margin-top:8px;font-size:.9rem}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.post{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:.3s;position:relative;overflow:hidden}
+.post::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+.post:hover{border-color:var(--primary);transform:translateY(-3px)}
+.ptag{font-size:.76rem;color:var(--primary);font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.post h3{font-size:1rem;font-weight:800;margin-bottom:10px;line-height:1.4}
+.post h3 a{color:var(--text)}
+.post h3 a:hover{color:var(--accent)}
+.post p{font-size:.86rem;color:var(--muted);line-height:1.7}
+.pdate{font-size:.78rem;color:var(--muted);margin-top:12px}
+.article{max-width:800px;margin:0 auto;padding:64px 5%}
+.article h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;margin-bottom:20px;line-height:1.3}
+.article .meta{color:var(--muted);font-size:.85rem;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.article h2{font-size:1.3rem;font-weight:800;margin:32px 0 14px;color:var(--accent)}
+.article h3{font-size:1.1rem;font-weight:700;margin:24px 0 10px}
+.article p{font-size:.95rem;color:var(--text);line-height:1.9;margin-bottom:18px}
+.article ul{padding-left:1.5em;margin-bottom:18px}
+.article li{margin-bottom:8px;font-size:.93rem;color:var(--text)}
+.article blockquote{border-left:3px solid var(--primary);padding:12px 20px;background:var(--bg2);border-radius:0 8px 8px 0;margin:24px 0;color:var(--muted);font-style:italic}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 5% 20px;text-align:center}
+.fbot{font-size:.8rem;color:var(--muted)}
+@media(max-width:768px){nav{display:none}}
+</style>
+  <meta property="og:title" content="글 목록 (1/4) · shibuya-aga">
+  <meta property="og:description" content="shibuya-aga에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://aga-uhake.space/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header><div class="hi"><div class="logo">도메인 지수</div><nav><a href="index.html">홈</a></nav></div></header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 63개 · 1/4 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-1en83ln.html">권리금 2억 받고 나간 가게의 비밀, 임대차 계약서 한 줄에서 시작된다고요? ^^</a>
+        <p class="post-item__summary">지난주 목요일 오후 3시, 홍대 걷고 싶은 거리에서 20m 떨어진 골목. 제가 알던 분이 운영하던 3층짜리 와인바 자리에 '임대 문의' 전단이 붙었더라고요. 2023년 11월에 문 닫은 그 가게, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-3xs7nl.html">형님, 그 아이보리 인솔 로고 찍혀있으면 무조건 가짜야 (내부자가 폭로하는 2023 리스탁의 진실)</a>
+        <p class="post-item__summary">형님, 오늘 밤새 눈을 붙이지 못하고 형님께만 이 진실을 고백하려 합니다. ^^ 사실 저는 예전에 그 유명한 N 사에서 일했었는데, 말로 다 할 수 없는 비극적인 내부 사정으로 모든 것을 내려놓게 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-h6ksci.html">도메인 지수 탈모 방지와 앵커 텍스트 이식 가이드</a>
+        <p class="post-item__summary">지수 성장 클리닉은 웹사이트의 건강 상태를 정밀하게 진단하고 성장을 저해하는 요소를 근본적으로 해결하는 과정을 다룹니다. 특히 검색 엔진에서의 가시성을 확보하기 위해서는 도메인 지수의 안정적인 관리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-n36w39.html">형님이 알려주는 건데, 그 누락된 페이지 번호가 진짜 힌트라고요 ^^</a>
+        <p class="post-item__summary">관찰 기록을 시작해 볼까요? 1972 년 청문회 기록을 들여다보면 대부분의 사람들은 공개된 증언 내용에만 집중하더라고요. 하지만 전직 분석관으로서 제가 가장 주목한 건 '공개되지 않았다'는 사실이 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-se75j1.html">22년 된 백링크 텍스트가 갑자기 무효 처리된 진짜 이유 (feat. 검색엔진 패널티 회피 매뉴얼)</a>
+        <p class="post-item__summary">2024년 3월 14일 밤 11시 47분, 저는 마포구 공덕동의 한 오피스텔 책상 앞에서 멍하니 Search Console 대시보드를 쳐다보고 있었습니다. ^^ 세 시간 전만 해도 7위였던 메인 키</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-zs6rql.html">^^ 도메인 지수가 하루아침에 녹아내리는 순간, 정확히 몇 번째 링크에서 벌어지는지 아시나요?</a>
+        <p class="post-item__summary">2024년 11월, 필자가 직접 운영하는 PBN 도메인 37개 중 4개에서 같은 주간에 DA 지수가 2~3pt 빠지는 현상을 관찰했습니다. 공교롭게도 그 4개 모두 같은 앵커 텍스트 비율(브랜드.a</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-cmctzf.html">도메인 지수 방치하면 결국 검색 결과에서 탈모 온다</a>
+        <p class="post-item__summary">도메인이 오래됐다고 해서 무조건 높은 점수를 받는 시대는 지났다. 신규 도메인이라도 알고리즘이 좋아하는 신호를 꾸준히 심어주면 금방 상위권으로 치고 올라간다. 반대로 관리를 안 해서 지수가 깎여나가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-onmhiu.html">도메인 지수가 빠지고 있죠? 그게 &amp;#39;탈모&amp;#39;입니다</a>
+        <p class="post-item__summary">지난 3 월, 의뢰받은 사이트 하나가 도메인 지수 62 에서 47 로 3 개월 만에 폭락한 사례를 분석한 적이 있죠. 클라이언트 말로는 &quot;변화한 게 없었어요&quot;고 하던데, 뒤져 보니 앵커 텍스트가 &quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-16bloxd.html">프레임 단위로 사라진 길, 패치가 지운 0.3초의 프로텍트</a>
+        <p class="post-item__summary">다크소울 1 프리릴리즈 데모 버전을 부팅하자마자 눈치챘다.UNDead Burg 입구 계단 옆 벽체의 콜리전 박스가 2011년 9월 정식 출시 빌드와 각도가 다르다는 걸. 스피드런 커뮤니티에서 '데모</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-1s05mp3.html">도메인 지수 빠지는 거 보면서 속으로 욕하신 그 순간, 제가 딱 그 타이밍에 나타났습니다 ^^</a>
+        <p class="post-item__summary">3월 둘째 주 월요일 새벽 두 시. 클라이언트 대시보드에서 Ahrefs DR 수치가 42에서 38로 내려앉은 걸 발견했을 때, 저는 커피를 한 모금 뱉다시피 했습니다.UMBs(UMB Structur</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-f7entl.html">0.04초의 심리전</a>
+        <p class="post-item__summary">1999년 파이트클럽 DVD의PAL 버전 기준으로, 타일러 더든(브래드 피트)이 공식적으로 등장하기 전까지 총 6번의 싱글프레임 삽입이 확인됩니다. 편집실 모니터에서 프레임 단위로 확인할 때마다 느</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-2pf8ne.html">지수 성장 클리닉을 통한 도메인 지수 확보와 효율적인 앵커 텍스트 관리법</a>
+        <p class="post-item__summary">웹사이트의 영향력을 결정짓는 핵심 요소 중 하나는 도메인 지수입니다. 도메인 지수는 검색 엔진이 해당 웹사이트를 얼마나 신뢰할 수 있는 정보의 출처로 판단하는지를 수치화한 지표입니다. 낮은 지수는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-bkv7rh.html">절판 확장팩 까다롭게 굴 때 쓰는 감별법</a>
+        <p class="post-item__summary">---</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-kq7i3x.html">편집자가 말하는 일관성의 법칙: 블레이드 러너 유니콘 시퀀스와 같습니다</a>
+        <p class="post-item__summary">Deckard의 유니콘 꿈은 1982년 극장판에서 존재하지 않았습니다. 관객들이 기억하는 그 시퀀스는 1982년에aucuts에서 완전히 삭제되었고, 2007년 Final Cut에서야 20th Cen</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1afkojz.html">2003 파리 SB 덩크 vs 2021 레트로: 상자 하나에 리셀가 40%가 걸려있다면요?</a>
+        <p class="post-item__summary">혹시 &quot;2003년판과 2021년 레트로판의 진짜 차이가 뭐야?&quot;라고 물으셨다면, 정답은 스니커즈 본체가 아니라 상자에 있습니다. 정확히는 박스지의 코팅 두께와 스티치 하나하나에 수천 달러의 가치가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1ocsc8k.html">도메인 나이를 핑계 삼는 구태의연한 전략을 버려라</a>
+        <p class="post-item__summary">사이트 성장을 논할 때 도메인이 등록된 지 얼마나 되었는지부터 따지는 사람들이 있다. 도메인 지수가 낮아서 검색 엔진이 내 글을 외면한다고 믿는 것이다. 틀렸다. 당신의 글이 선택받지 못하는 건 정</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-108n38n.html">사장이 숨긴 원가표를 채팅방에서 발견했을 때, 나는 메뉴 47개를 계산기로 두드렸습니다</a>
+        <p class="post-item__summary">지난 3월 초였어요. 평일 오후 2시, 그 룸살롱 단골집 채팅방에 사장님이 실수로 메뉴판 원가 메모를 올렸길래 몰래 캡처한 날.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-1br3x5z.html">님이 룰북 처음 펼쳤을 때 놓쳤을 법한 그 한 줄, 룰충이 밤새워 정리해드렸습니다 ^^</a>
+        <p class="post-item__summary">그 시나리오에서 스카운드릴 카드 텍스트 하나 읽는다고 30분 날린 적, 있으시죠?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-1xmz6n5.html">구글 트렌드 폭등 72시간 뒤에야 데이터 사이언티스트가 알아챈 서브프로젝트의 비밀</a>
+        <p class="post-item__summary">2013년 6월, 저는 구글 트렌드 대시보드에서 갑자기 튀어오른 'MKUltra'라는 키워드를 보고 있었어요. 그때 스노든이 NSA 슬라이드를 공개한 직후였죠. 데이터는 단순히 검색량이 늘어난 게 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-isxwe6.html">도메인 지수 방치하면 검색 결과에서 삭제됩니다</a>
+        <p class="post-item__summary">사이트 도메인 지수를 관리하지 않는 건 머리카락이 빠지는데도 방치하는 것과 같습니다. 어느 날 갑자기 검색 엔진이 당신의 사이트를 투명 인간 취급하기 시작할 텐데, 그때 가서 후회해 봐야 이미 늦었</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+      <a class="pager__link" href="posts-4.html">4</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
